@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-image: url(background.jpeg);
+
+}
+
+header {
+    padding: 15px;
+    text-align: left;
+    background: linear-gradient(brown, rgb(116, 29, 29));
+    font-size: 30px;
+    
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    font-family: sans-serif;
+    background-image: url(header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+}
+
+header img {
+    width: 100px;
+
+}
+
+
+/* Horizontal scroll container */
+.pics {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    color:white;
+    
+}
+
+.pics>div {
+    min-width: 50vw;
+    max-width: 50vw;
+    min-height: 60vh;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    font-size: 2rem;
+    flex-shrink: 0;
+    text-align: center;
+    background-image: url(67background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pics img {
+    width: 150px;
+    height: auto;
+    
+}
+
+nav {
+    height: 3rem;
+    display: flex;
+    gap: .7rem;
+    padding: .3rem 1rem;
+    align-items: center;
+    background: linear-gradient(to bottom, #222, #444);
+    background-image: url(background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+    a {
+        font: bold 1.2rem system-ui;
+        color: white;
+        -webkit-text-stroke: 0.5px black;
+        text-decoration: none;
+
+        &:hover {
+            color: #99f;
+        }
+    }
+}
+::-webkit-scrollbar{
+    display:none;
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    background-image: url(fsefnfknewfew.png);
+    background-size:cover;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+

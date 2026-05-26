@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gate Access</title>
+    <link rel="stylesheet" href="kött.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fullscreen overlay */
+        #gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        #gate img {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        #gate img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hidden content */
+        #content {
+            display: none;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CLICK-THROUGH GATE -->
+    <div id="gate">
+        <img src="haram.jpg" onclick="unlock(1)">
+        <img src="warning.png" onclick="unlock(2)">
+        <img src="walterharam.gif" onclick="unlock(3)">
+        
+    </div>
+
+    <!-- REAL WEBSITE CONTENT -->
+    <header>
+        <h1>Wild Hogs</h1>
+
+    </header>
+    <nav>
+        <a href="kontakter.html">kontakter</a>
+        <a href="kött.html">Kött</a>
+        <a href="motorcyklar.html">motorcyklar</a>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <section>
+        <div class="pics">
+            <div>
+                <img src="kött/oxfile.jpg" alt="Image 1" />
+                <p>vi älskar oxfile</p>
+            </div>
+            <div>
+                <img src="kött/pork.jpg" alt="Image 2" />
+                <p>Gris är den bästa maten</p>
+            </div>
+            <div>
+                <img src="kött/ribs.jpg" alt="Image 3" />
+                <p>Inget bättre än ribs på en lördag😋😋😋😋😋</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let clicks = 0;
+
+        function unlock(num) {
+            clicks++;
+
+            // After 3 clicks, show the website
+            if (clicks >= 3) {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
